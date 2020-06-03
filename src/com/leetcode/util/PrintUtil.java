@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.util;
 
 /**
  * 打印工具

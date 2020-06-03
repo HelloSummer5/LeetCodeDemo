@@ -12,6 +12,11 @@ public class LeetCodeFace64 {
         System.out.println(sumNums(3));
     }
 
+    /**
+     * @Author 啵酱
+     * @param n
+     * @return
+     */
     public static int sumNums(int n) {
         if (n == 1){
             return n;

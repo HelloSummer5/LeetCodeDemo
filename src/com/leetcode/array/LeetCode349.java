@@ -1,10 +1,8 @@
 package com.leetcode.array;
 
-import com.leetcode.PrintUtil;
+import com.leetcode.util.PrintUtil;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -37,7 +35,13 @@ public class LeetCode349 {
 
     }
 
-    public static int[] intersect1(int[] nums1, int[] nums2) {
+    /**
+     * @Author 啵酱
+     * @param nums1
+     * @param nums2
+     * @return
+     */
+    public static int[] intersect(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();
         Set<Integer> res = new HashSet<>();
         for (int i = 0; i < nums1.length; i++) {
@@ -50,25 +54,6 @@ public class LeetCode349 {
             }
         }
         int[] result = res.stream().mapToInt(Integer::valueOf).toArray();
-        return result;
-    }
-
-    public static int[] intersect(int[] nums1, int[] nums2) {
-        Set<Integer> set1 = new HashSet<>();
-        for (int i = 0; i < nums1.length; i++) {
-            set1.add(nums1[i]);
-        }
-        String chr = "";
-        for (int i = 0; i < nums2.length; i++) {
-            if (set1.contains(nums2[i])){
-                chr += nums2[i];
-            }
-        }
-        String str[] = chr.split(",");
-        int result[] = new int[str.length];
-        for(int i= 0; i< str.length; i++){
-            result[i] = Integer.parseInt(str[i]);
-        }
         return result;
     }
 

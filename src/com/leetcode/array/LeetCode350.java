@@ -1,6 +1,6 @@
 package com.leetcode.array;
 
-import com.leetcode.PrintUtil;
+import com.leetcode.util.PrintUtil;
 
 import java.util.*;
 
@@ -25,6 +25,12 @@ public class LeetCode350 {
         PrintUtil.print(intersect(nums1, nums2));
     }
 
+    /**
+     * @Author 啵酱
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public static int[] intersect(int[] nums1, int[] nums2) {
         Map map = new HashMap<>();
         List<Integer> res = new ArrayList<>();
@@ -50,6 +56,12 @@ public class LeetCode350 {
         return result;
     }
 
+    /**
+     * @Author 啵酱
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public static int[] intersect1(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();
         for (int i = 0; i < nums1.length; i++) {

@@ -44,6 +44,13 @@ public class LeetCode1431 {
         System.out.print("]");
 
     }
+
+    /**
+     * @Author 啵酱
+     * @param candies
+     * @param extraCandies
+     * @return
+     */
     public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         // 找出最多糖果个数
         int maxCandyCount = 0;

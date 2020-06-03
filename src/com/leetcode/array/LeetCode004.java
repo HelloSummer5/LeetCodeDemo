@@ -28,6 +28,12 @@ public class LeetCode004 {
         System.out.println(findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
     }
 
+    /**
+     * @Author 啵酱
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] arr = new int[nums1.length + nums2.length];
         for (int i = 0; i < nums1.length; i++) {
