@@ -26,10 +26,23 @@ package com.leetcode.everyday;
 public class LeetCode837 {
 
     public static void main(String[] args) {
-        System.out.println(new21Game(21,17,10));
-        System.out.println(new21Game(10,1,10));
+//        System.out.println(new21Game(21,17,10));
+        System.out.println(new21Game3(21,17,10));
     }
 
+    public static double new21Game(int N, int K, int W) {
+        double[] f = new double[K + W];
+        for (int i = K; i <= N; i++) {
+            f[i] = 1.0;
+        }
+        double s = N - K + 1;
+        for (int x = K - 1; x >= 0; x--) {
+            f[x] =  s / W;
+            // 原等式便于理解：s = s - f[x + W] + f[x + 1]，下面这行原等式基础之上优化
+            s += f[x] - f[x + W];
+        }
+        return f[0];
+    }
     /**
      * @Author 啵酱
      * @Description 这个答案超时了
@@ -43,6 +56,7 @@ public class LeetCode837 {
             return 1.0;
         }
         double[] dp = new double[K + W];
+//        for (int i = K; i <= N && i < K + W; i++) {
         for (int i = K; i <= N && i < K + W; i++) {
             dp[i] = 1.0;
         }
@@ -57,15 +71,16 @@ public class LeetCode837 {
         return dp[0];
     }
 
+
     /**
      * @Author 啵酱
-     * @Description 最优解
+     * @Description 优化1
      * @param N 分数小<=n
      * @param K 不少于K分
      * @param W 牌面范围Max
      * @return
      */
-    public static double new21Game(int N, int K, int W) {
+    public static double new21Game2(int N, int K, int W) {
         if (K == 0){
             return 1.0;
         }
@@ -82,4 +97,62 @@ public class LeetCode837 {
         return dp[0];
     }
 
+    /**
+     * @Author 啵酱
+     * @Description 优化2：公式优化
+     * @param N 分数小<=n
+     * @param K 不少于K分
+     * @param W 牌面范围Max
+     * @return
+     */
+    public static double new21Game3(int N, int K, int W) {
+        if (K == 0){
+            return 1.0;
+        }
+        double[] f = new double[K + W];
+        for (int i = K; i <= N; i++) {
+            f[i] = 1.0;
+        }
+        // 初始化f[K - 1]即 f(16), Math.min以 N - K > W 导致概率超过1
+        f[K - 1] = 1.0 * Math.min(N - K + 1, W) / W;
+        for (int x = K - 1; x >= 1; x--) {
+            f[x - 1] = f[x] - (f[x + W] - f[x]) / W;
+        }
+        return f[0];
+    }
+
+    public static double new21GameP2(int N, int K, int W) {
+        if (K == 0){
+            return 1.0;
+        }
+        double[] f = new double[K + W];
+        for (int i = K; i <= N && i < K + W; i++) {
+            f[i] = 1.0;
+        }
+
+        double s = N - K + 1;
+        for (int i = K - 1; i >= 0; i--) {
+            f[i] = s / W;
+            s += f[i] - f[i + W];
+        }
+        return f[0];
+    }
+
+    public static double new21GameP3(int N, int K, int W) {
+        // 初始化一个数组(长度为K+W，包含0)来表示蓝色部分的概率
+        double f[] = new double[K + W];
+        // [K, N]初始化为1，剩下初始化为0
+        for (int i = K; i <= N; i++) {
+            f[i] = 1.0;
+        }
+
+        for (int x = K - 1; x >= 0 ; x--) {
+            for (int j = 0; j <= N; j++) {
+                // 无脑堆公式
+                double tmp = f[x + j];
+                f[x] += tmp / W;
+            }
+        }
+        return f[0];
+    }
 }
