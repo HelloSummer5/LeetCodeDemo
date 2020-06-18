@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719da56c-8707-45f2-a59a-e60cdd570c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode001.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode004.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode349.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode350.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCode238.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCode54.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode001.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode001.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode004.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode004.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +44,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/leetcode/md/array" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/leetcode/md/everyday" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.leetcode.everyday" />
       <recent name="com.leetcode.array" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/leetcode/md/everyday" />
+      <recent name="$PROJECT_DIR$/src/com/leetcode/md/array" />
     </key>
   </component>
   <component name="RunManager" selected="Application.LeetCode739">
@@ -168,7 +176,7 @@
       <workItem from="1592273379476" duration="602000" />
       <workItem from="1592284501553" duration="468000" />
       <workItem from="1592444637205" duration="96000" />
-      <workItem from="1592444741795" duration="1244000" />
+      <workItem from="1592444741795" duration="2781000" />
     </task>
     <servers />
   </component>
