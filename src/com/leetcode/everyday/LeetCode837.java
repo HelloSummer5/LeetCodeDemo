@@ -26,7 +26,7 @@ package com.leetcode.everyday;
 public class LeetCode837 {
 
     public static void main(String[] args) {
-//        System.out.println(new21Game(21,17,10));
+        System.out.println(new21Game2(21,17,10));
         System.out.println(new21Game3(21,17,10));
     }
 
@@ -73,7 +73,7 @@ public class LeetCode837 {
 
 
     /**
-     * @Author 啵酱
+     * @Author
      * @Description 优化1
      * @param N 分数小<=n
      * @param K 不少于K分
