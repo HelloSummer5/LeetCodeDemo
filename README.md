@@ -12,10 +12,11 @@
 ##### [837.新21点(中等)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCode837.md)
 ##### [1431.拥有最多糖果的孩子(简单)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCode1431.md)
 ##### [面试题64.求1+2+…+n(中等)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCodeFace64.md)
+##### [1028.从先序遍历还原二叉树(困难)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCode1028.md)
 
 
 
 
 <br>
 
-- PS:欢迎在线催更, 欢迎到b站[@啵酱BouillonSauce](https://space.bilibili.com/400115474)私信催，发送leetcode+题号,  例如leercode837
+###### PS：欢迎在线催更, 欢迎到b站[@啵酱BouillonSauce](https://space.bilibili.com/400115474)私信催，发送leetcode+题号,  例如leercode837

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719da56c-8707-45f2-a59a-e60cdd570c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCode1431.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCode739.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCode837.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCodeFace64.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leetcode/everyday/LeetCode1028.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leetcode/md/everyday/LeetCode1028.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -174,7 +172,7 @@
       <workItem from="1592273379476" duration="602000" />
       <workItem from="1592284501553" duration="468000" />
       <workItem from="1592444637205" duration="96000" />
-      <workItem from="1592444741795" duration="3837000" />
+      <workItem from="1592444741795" duration="4853000" />
     </task>
     <servers />
   </component>
