@@ -13,6 +13,7 @@
 ##### [1431.拥有最多糖果的孩子(简单)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCode1431.md)
 ##### [面试题64.求1+2+…+n(中等)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCodeFace64.md)
 ##### [1028.从先序遍历还原二叉树(困难)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCode1028.md)
+##### [125.验证回文串(简单)](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/md/everyday/LeetCode125.md)
 
 
 
