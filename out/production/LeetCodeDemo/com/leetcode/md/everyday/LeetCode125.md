@@ -17,12 +17,29 @@
 
 ### 思路
 回文常见的三种做法：双指针、栈、字符串反转
+- 双指针：6ms
+- 栈：8ms
+- 字符串反转：6ms
 
 ### 代码
 ```java
 class Solution {
     public boolean isPalindrome(String s) {
-            
+        // 过滤非字母数字字符
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (Character.isLetterOrDigit(c)) {
+                stringBuffer.append(Character.toLowerCase(c));
+            }
+        }
+        // 双指针
+        int start = 0, end = str.length() - 1;
+        while (start < end) {
+            if (Character.toUpperCase(str.charAt(start)) != Character.toUpperCase(str.charAt(end))) return false;
+            start++;
+            end--;
+        }
+        return true;
     }
 }
 ```
