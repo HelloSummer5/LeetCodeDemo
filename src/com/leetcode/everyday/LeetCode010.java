@@ -32,7 +32,7 @@ package com.leetcode.everyday;
 public class LeetCode010 {
 
     public static void main(String[] args) {
-        System.out.println(isMatch("", ".*"));
+        System.out.println(isMatch("a", "b*"));
     }
 
     /**
@@ -42,16 +42,23 @@ public class LeetCode010 {
      * @return
      */
     public static boolean isMatch(String s, String p) {
+        // s[i-1] == p[i-1]   ---->  继续往前遍历:dp[i][j]=dp[i-1][j-1]
+        // s[i-1] != p[i-1]
+        //  --> 1. p[i-1]是*
+        //    --> 1.1 s[i-1] == p[i-2]   ==>
+        //        -->  * 让p[i-1]出现0次：dp[i][j] = dp[i][j-2]
+        //        -->  * 让p[i-1]出现1次：dp[i][j] = dp[i-1][j-2]
+        //        -->  * 让p[i-1]出现>=2次：dp[i][j] = dp[i-1][j]
+        //    --> 1.2 s[i-1] != p[i-2]  ==> 并未完全死刑：
         int lens = s.length(), lenp = p.length();
-        boolean[][] dp = new boolean[lens + 1][lenp+1];
+        boolean[][] dp = new boolean[lens + 1][lenp + 1];
         // 初始化dp[0][0]
         dp[0][0] = true;
         for (int j = 1; j < lenp + 1; j++){
-            if (p.charAt(j - 1) == '*' && dp[0][j - 2]){
-                dp[0][j] = true;
+            if (p.charAt(j - 1) == '*' && j >= 2){
+                dp[0][j] = dp[0][j - 2];
             }
         }
-
         for (int i = 1; i < lens + 1; i++) {
             for (int j = 1; j < lenp + 1; j++) {
                 // 末尾元素相匹配
@@ -60,13 +67,13 @@ public class LeetCode010 {
                 } else if (p.charAt(j - 1) == '*' && j >= 2) { // p末尾是*结尾
                     // s能够p末尾*的前一个元素匹配 | p倒数第二个字符是.
                     if (s.charAt(i - 1) == p.charAt(j - 2) || p.charAt(j - 2) == '.')
+                        // *让a重复0次、1次、>=2次
                         dp[i][j] = dp[i][j - 2] || dp[i - 1][j - 2] || dp[i - 1][j];
                     else
                         dp[i][j] = dp[i][j - 2];
                 }
             }
         }
-
         return dp[lens][lenp];
     }
 
