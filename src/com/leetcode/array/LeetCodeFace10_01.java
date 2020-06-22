@@ -21,9 +21,12 @@ import java.util.Map;
 public class LeetCodeFace10_01 {
 
     public static void main(String[] args) {
-        int m = 3, n = 3;
-        int[] A = new int[]{1, 2 , 3, 0, 0, 0};
-        int[] B = new int[]{2, 5, 6};
+//        int m = 3, n = 3;
+//        int[] A = new int[]{1, 2 , 3, 0, 0, 0};
+//        int[] B = new int[]{2, 5, 6};
+        int m = 0, n = 1;
+        int[] A = new int[]{0};
+        int[] B = new int[]{1};
         merge(A, m, B, n);
         PrintUtil.print(A);
     }
@@ -34,12 +37,43 @@ public class LeetCodeFace10_01 {
      * @param m
      * @param B
      * @param n
+     * @Description 代码精简版，看不懂可以根据md先看下后面懂图解易懂版代码
      */
     public static void merge(int[] A, int m, int[] B, int n) {
         int idx1 = m - 1;
         int idx2 = n - 1;
         int tail = m + n - 1;
-        while(idx2 >= 0){
+        while(idx2 > 0){
+            if (A[idx1] > B[idx2]) {
+                A[tail--] = A[idx1--];
+            }else {
+                A[tail--] = B[idx2--];
+            }
+        }
+        // A、B中可能有剩余元素
+        // A中有剩余元素
+        while (idx1 > 0){
+            A[tail--] = A[idx1--];
+        }
+        // B中有剩余元素
+        while (idx2 > 0){
+            A[tail--] = B[idx2--];
+        }
+    }
+
+    /**
+     * @Author 啵酱
+     * @param A
+     * @param m
+     * @param B
+     * @param n
+     * @Description 图解易懂版
+     */
+    public static void merge1(int[] A, int m, int[] B, int n) {
+        int idx1 = m - 1;
+        int idx2 = n - 1;
+        int tail = m + n - 1;
+        while(idx2 > 0){
             if (A[idx1] > B[idx2]) {
                 A[tail] = A[idx1];
                 idx1--;
@@ -49,7 +83,19 @@ public class LeetCodeFace10_01 {
                 idx2--;
                 tail--;
             }
-
+        }
+        // A、B中可能有剩余元素
+        // A中有剩余元素
+        while (idx1 > 0){
+            A[tail] = A[idx1];
+            tail--;
+            idx1--;
+        }
+        // B中有剩余元素
+        while (idx2 > 0){
+            A[tail] = B[idx2];
+            tail--;
+            idx2--;
         }
     }
 
