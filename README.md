@@ -26,4 +26,3 @@
 
 <br>
 
-###### PS：欢迎在线催更, 欢迎到b站[@啵酱BouillonSauce](https://space.bilibili.com/400115474)私信催，发送leetcode+题号,  例如leercode837
