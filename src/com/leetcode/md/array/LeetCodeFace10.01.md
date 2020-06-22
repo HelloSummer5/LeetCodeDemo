@@ -18,6 +18,7 @@ B = [2,5,6],       n = 3
 - 本题采用归并排序思想
 - 从第二个数组中最大的元素开始遍历（从最小的开始要往后挪动元素，会增加时间复杂度）
 - PS:下图从左至右观看
+<>
 ![alt](https://hbimg.huabanimg.com/357141ebd03d33b870bb1941a073965516d5e1584858-P4a7GR)
 ![alt](https://hbimg.huabanimg.com/192ab0f59791ec263208ce4bbb877598fb6ea9ab62d4-nWaFku)
 ![alt](https://hbimg.huabanimg.com/ea50a4555382897c12c720ed6b9fd53cf14eb61e7125-U3y2bm)
@@ -28,22 +29,26 @@ B = [2,5,6],       n = 3
 class Solution {
     public static boolean isMatch(String s, String p) {
         public static void merge(int[] A, int m, int[] B, int n) {
-                int idx1 = m - 1;
-                int idx2 = n - 1;
-                int tail = m + n - 1;
-                while(idx2 >= 0){
-                    if (A[idx1] > B[idx2]) {
-                        A[tail] = A[idx1];
-                        idx1--;
-                        tail --;
-                    }else {
-                        A[tail] = B[idx2];
-                        idx2--;
-                        tail--;
-                    }
-        
+            int idx1 = m - 1;
+            int idx2 = n - 1;
+            int tail = m + n - 1;
+            while(idx2 > 0){
+                if (A[idx1] > B[idx2]) {
+                    A[tail--] = A[idx1--];
+                }else {
+                    A[tail--] = B[idx2--];
                 }
             }
+            // A、B中可能有剩余元素
+            // A中有剩余元素
+            while (idx1 > 0){
+                A[tail--] = A[idx1--];
+            }
+            // B中有剩余元素
+            while (idx2 > 0){
+                A[tail--] = B[idx2--];
+            }    
+        }
     }
 }
 ```
