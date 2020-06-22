@@ -31,11 +31,11 @@ import java.util.*;
  */
 public class LeetCode124 {
 
-    private int ret = Integer.MIN_VALUE;
+    private int res = Integer.MIN_VALUE;
 
     public static void main(String[] args) {
         LeetCode124 demo = new LeetCode124();
-        System.out.println(demo.maxPathSum(buildTree(new int[]{-10,9,20,15,7}, 0)));
+        System.out.println(demo.maxPathSum(buidTree(new int[]{-10,9,20,15,7})));
     }
 
     /**
@@ -61,36 +61,44 @@ public class LeetCode124 {
     }
 
     public int maxPathSum(TreeNode root) {
-        getMax(root);
-        return ret;
+        dfs(root);
+        return res;
     }
 
-    private int getMax(TreeNode r) {
+    private int dfs(TreeNode r) {
         if(r == null) return 0;
-        int left = Math.max(0, getMax(r.left)); // 如果子树路径和为负则应当置0表示最大路径不包含子树
-        int right = Math.max(0, getMax(r.right));
-        ret = Math.max(ret, r.val + left + right); // 判断在该节点包含左右子树的路径和是否大于当前最大路径和
+        int left = Math.max(0, dfs(r.left)); // 如果子树路径和为负则应当置0表示最大路径不包含子树
+        int right = Math.max(0, dfs(r.right));
+        res = Math.max(res, r.val + left + right); // 判断在该节点包含左右子树的路径和是否大于当前最大路径和
         return Math.max(left, right) + r.val;
     }
         /**
          * 建树
-         * @param arr
+         * @param a
          * @return
          */
-    public static TreeNode buildTree(int[] arr, int index) {
-        TreeNode tn = null;
-        if (index < arr.length) {
-            Integer value = arr[index];
-            if (value == null) {
-                return null;
+        public static TreeNode buidTree(int[] a){
+            TreeNode root = new TreeNode(a[0]);
+            TreeNode queue[] = new TreeNode[a.length + 1];
+            int front = 0, rear = 0;
+            for (int j = 0; j < a.length; j++) {
+                TreeNode node = new TreeNode(a[j]);
+                node.left = node.right = null;
+                // node.val = a[j];
+                if(j == 0){
+                   root = node;
+                }else {
+                    if(null != queue[rear / 2].left){
+                        queue[rear / 2].left = node;
+                    }else {
+                        queue[rear / 2].right = node;
+                        front++;
+                    }
+                }
+
             }
-            tn = new TreeNode(value);
-            tn.left = buildTree(arr, 2*index+1);
-            tn.right = buildTree(arr, 2*index+2);
-            return tn;
+            return root;
         }
-        return tn;
-    }
 
     /**
      * 题目给的二叉树
