@@ -57,7 +57,7 @@ class Solution {
         public int guessNumber(int n) {
                 int start = 0, end = n;
                 int mid = 0;
-                while(start < end){
+                while(start < end){:
                     mid = (start + end + 1) >>> 1;
                     int guessNum = guess(mid);
                     if(guessNum == 0) return mid;
