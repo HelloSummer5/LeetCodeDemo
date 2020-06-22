@@ -50,7 +50,7 @@ public class LeetCodeFace10_01 {
                 A[tail--] = B[idx2--];
             }
         }
-        // A、B中可能有剩余元素
+        // A、B中只可能有一个剩余元素
         // A中有剩余元素
         while (idx1 > 0){
             A[tail--] = A[idx1--];

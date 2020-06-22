@@ -17,8 +17,8 @@ B = [2,5,6],       n = 3
 ### 思路
 - 本题采用归并排序思想
 - 从第二个数组中最大的元素开始遍历（从最小的开始要往后挪动元素，会增加时间复杂度）
-- PS:下图从左至右观看
-<>
+- 下图从左至右观看
+
 ![alt](https://hbimg.huabanimg.com/357141ebd03d33b870bb1941a073965516d5e1584858-P4a7GR)
 ![alt](https://hbimg.huabanimg.com/192ab0f59791ec263208ce4bbb877598fb6ea9ab62d4-nWaFku)
 ![alt](https://hbimg.huabanimg.com/ea50a4555382897c12c720ed6b9fd53cf14eb61e7125-U3y2bm)
@@ -39,7 +39,7 @@ class Solution {
                     A[tail--] = B[idx2--];
                 }
             }
-            // A、B中可能有剩余元素
+            // A、B中只可能有一个剩余元素
             // A中有剩余元素
             while (idx1 > 0){
                 A[tail--] = A[idx1--];
