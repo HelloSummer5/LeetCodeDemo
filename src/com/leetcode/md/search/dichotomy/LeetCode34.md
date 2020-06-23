@@ -37,11 +37,6 @@
 
 ![alt](https://pic.leetcode-cn.com/049e64ded6739e8bd6955a1d5e3ef76acc0aac0ad12909bdd58772dd6d465240-image.png)
 
-> 总结
-1. ```int mid = (left + right) / 2```是初级写法，是有 bug 的；
-2. ```int mid = left + (right - left) / 2;```是正确的写法，说明你考虑到了整型溢出的风险；
-3. ```int mid = (low + high) >>> 1;```  首先肯定是正确的写法，其实也是一个装 ❌ 的写法，理由上面已经叙述过了。
-
 ### 代码
 ```java
 class Solution {
@@ -72,4 +67,7 @@ class Solution {
     }
 }
 ```
+
+- 本项目代码：[LeetCode34](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/search/dichotomy/LeetCode34.java "悬停显示")
+
 
