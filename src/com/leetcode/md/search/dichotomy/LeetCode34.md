@@ -35,8 +35,6 @@
 ![](https://hbimg.huabanimg.com/d21737fafca08c574547937194f2ddf8df3a498dcb7e-DvIhsM)
 ![](https://hbimg.huabanimg.com/9a9e94f54283433575ef87a1afaa8326bbbd92ddb2bc-bPbeKz)
 
-![alt](https://pic.leetcode-cn.com/049e64ded6739e8bd6955a1d5e3ef76acc0aac0ad12909bdd58772dd6d465240-image.png)
-
 ### 代码
 ```java
 class Solution {
