@@ -18,8 +18,8 @@
 >   2.1 由于是**有序**数组，重复元素必然挨在一起<br>
 >   2.2 引入isLeft, isLeft=true查询左边元素，isLeft=false查询右边元素<br>
 >   2.3 **如果在下标为 i 处遇到了 target ，最左边的 target 一定不会出现在下标大于 i 的位置，所以永远不需要考虑右子区间。**当求最右下标时，道理同样适用。<br>
->   ![](https://hbimg.huabanimg.com/7f4ec86aca49f73266e23225c73308350323613b7a40-SLGYbk)
 > 3. target不在数组中
+  ![](https://hbimg.huabanimg.com/7f4ec86aca49f73266e23225c73308350323613b7a40-SLGYbk)
 
 > 具体做法
 - 1.初始化mid，进行一次二分查找并**返回start**。
