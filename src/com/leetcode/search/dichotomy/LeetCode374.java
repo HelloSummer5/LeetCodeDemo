@@ -1,7 +1,7 @@
 package com.leetcode.search.dichotomy;
 
 /**
- * @NO  题目编号：LeetCode704
+ * @NO  题目编号：LeetCode374
  * @Description 题目描述：
  *          我们正在玩一个猜数字游戏。 游戏规则如下：
  *      我从 1 到 n 选择一个数字。 你需要猜我选择了哪个数字。
@@ -22,7 +22,6 @@ public class LeetCode374 {
 
     public static void main(String[] args) {
         System.out.println(guessNumber(10));
-        System.out.println(11 / 2);
     }
 
     public static int guessNumber(int n) {
