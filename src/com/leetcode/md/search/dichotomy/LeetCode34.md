@@ -16,10 +16,11 @@
 > 1. target中有一个无重复元素
 > 2. target中有多个无重复元素<br>
 >   2.1 由于是**有序**数组，重复元素必然挨在一起
+>   2.2 引入isLeft, isLeft=true查询左边元素，isLeft=false查询右边元素
 > 3. target不在数组中
 
 > 具体做法
-- 1.初始化mid，进行一次二分查找并**返回start**
+- 1.初始化mid，进行一次二分查找并**返回start**。
     - a) nums[mid] < target, start = mid + 1 = 3
     - b) 进入二轮循环，重新计算mid = 4；<br>
          end = mid - 1 = 3
