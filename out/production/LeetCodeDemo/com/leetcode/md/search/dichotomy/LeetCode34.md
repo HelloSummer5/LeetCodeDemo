@@ -11,55 +11,70 @@
 解释: 9 出现在 nums 中并且下标为 4
 ```
 
-### 关于中位数取法的思考
-- 1.最初学习二分法的时候，中位数的索引是这样的：
-```java
-int mid = (left + right) / 2;
+### 思路
+> 关于target和数组关系有三种可能：
+> 1. target中有一个无重复元素
+> 2. target中有多个无重复元素<br>
+>   2.1 由于是**有序**数组，重复元素必然挨在一起<br>
+>   2.2 引入isLeft, isLeft=true查询左边元素，isLeft=false查询右边元素<br>
+>   2.3 **如果在下标为 i 处遇到了 target ，最左边的 target 一定不会出现在下标大于 i 的位置，所以永远不需要考虑右子区间。** 当求最右下标时，道理同样适用。<br>
+![](https://hbimg.huabanimg.com/7f4ec86aca49f73266e23225c73308350323613b7a40-SLGYbk)
+>
+> 3. target不在数组中
+  
+
+> 具体做法
+
 ```
-- 2.后来被告知在 left 和 right 很大的时候，left + right 会发生整型溢出，变成负数，这是一个 bug 得改！于是写成：
-```java
-int mid = left + (right - left) / 2;
-```
-- 然后又被告知 mid = left + (right - left) // 2 在 right 很大、 left 是负数且很小的时候， right - left 也有可能超过 int 类型能表示的最大值，只不过一般情况下 left 和 right 表示的是数组索引值，left 是非负数，因此 right - left 溢出的可能性很小。
-- 3.最后，在 Java 的 JDK 的 Collections 和 Arrays 提供的 binarySearch 方法里看到了，中位数是这样取的：
-```java
-int mid = (low + high) >>> 1;
-```
-- 怎么又变成 + 了，一头雾水啊，会整型溢出吗？后来查了查资料，有可能会整型溢出的，不过结果依然正确。下面是原因：
-> left + right 在发生整型溢出以后，会变成负数，此时如果除以 22 ，mid 是一个负数，但是经过无符号右移，可以得到在不溢出的情况下正确的结果。
-
-首先解释“无符号右移”，在 Java 中，无符号右移运算符 >>> 和右移运算符 >> 的区别如下：
-- 右移运算符 >> 在右移时，丢弃右边指定位数，左边补上符号位；
-- 无符号右移运算符 >>> 在右移时，丢弃右边指定位数，左边补上 00，也就是说，对于正数来说，二者一样，而负数通过 >>> 后能变成正数。
-
-了解了这一点，就能够理解 Java 中用 int mid = (low + high) >>> 1; 的原因了，关键不在 + ，而是“无符号右移”，在 Java 的 Collections 和 Arrays 提供的 binarySearch 方法里，low 和 high 都表示索引值，它们都是非负数，即使相加以后整型溢出，结果还是正确的，“位运算”本身就比其它运算符快，因此使用 + 和“无符号右移”可以说是既快又好的做法。
-如果你用 Java 写的话，不妨做下面的试验：
-用 + 和除法，不能通过，提示也很清楚了。
-
-![alt](https://pic.leetcode-cn.com/049e64ded6739e8bd6955a1d5e3ef76acc0aac0ad12909bdd58772dd6d465240-image.png)
-
-> 总结
-1. ```int mid = (left + right) / 2```是初级写法，是有 bug 的；
-2. ```int mid = left + (right - left) / 2;```是正确的写法，说明你考虑到了整型溢出的风险；
-3. ```int mid = (low + high) >>> 1;```  首先肯定是正确的写法，其实也是一个装 ❌ 的写法，理由上面已经叙述过了。
+1.初始化mid，进行一次二分查找并返回start。
+  a) nums[mid] < target, start = mid + 1 = 3
+  b) 进入二轮循环，重新计算mid = 4；<br>
+         end = mid - 1 = 3
+  c) 循环结束，返回start = 3
+2.一轮二分查找之后的start赋值到res数组第一个元素<br>
+  进行第二轮二分查找，得到最右边的下标
+3.注意边界情况处理：
+  a) 输入：[1] 1
+  b) target在数组中不存在
+``` 
+  
+![](https://hbimg.huabanimg.com/58580511ed6972e41eee57b8c4646e16306de44b9f2d-KuUH5x)
+![](https://hbimg.huabanimg.com/0d3da1c26cf292e8d5eaecc797fea02dd356a361a338-7vZ51C)
+![](https://hbimg.huabanimg.com/d21737fafca08c574547937194f2ddf8df3a498dcb7e-DvIhsM)
+![](https://hbimg.huabanimg.com/9a9e94f54283433575ef87a1afaa8326bbbd92ddb2bc-bPbeKz)
 
 ### 代码
 ```java
 class Solution {
-    public int search(int[] nums, int target) {
-        public int guessNumber(int n) {
-                int start = 0, end = n;
-                int mid = 0;
-                while(start < end){:
-                    mid = (start + end + 1) >>> 1;
-                    int guessNum = guess(mid);
-                    if(guessNum == 0) return mid;
-                    else if(guessNum == 1) start = mid;
-                    else if(guessNum == -1) end = mid - 1;
+    private static int extremeInsertionIndex(int[] nums, int target, boolean isLeft) {
+            int start = 0;
+            int end = nums.length - 1;
+            while (start <= end) {
+                int mid = (start + end) / 2;
+                if (nums[mid] > target || (isLeft && target == nums[mid])) {
+                    end = mid - 1;
+                }else {
+                    start = mid + 1;
                 }
-                return -1;
             }
+            return start;
+        }
+    
+    public static int[] searchRange(int[] nums, int target) {
+        int[] res = {-1, -1};
+        int left = extremeInsertionIndex(nums, target, true);
+        // assert that `leftIdx` is within the array bounds and that `target`
+        if (left == nums.length || nums[left] != target) {
+            return res;
+        }
+        res[0] = left;
+Math.sqrt(9);
+        res[1] = extremeInsertionIndex(nums, target, false) - 1;
+        return res;
     }
 }
 ```
+
+- 本项目代码：[LeetCode34](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/search/dichotomy/LeetCode34.java "悬停显示")
+
 

@@ -26,7 +26,7 @@
 > 具体做法
 
 ```
-1.初始化mid，进行一次二分查找并**返回start**。
+1.初始化mid，进行一次二分查找并返回start。
   a) nums[mid] < target, start = mid + 1 = 3
   b) 进入二轮循环，重新计算mid = 4；<br>
          end = mid - 1 = 3
@@ -68,6 +68,7 @@ class Solution {
             return res;
         }
         res[0] = left;
+Math.sqrt(9);
         res[1] = extremeInsertionIndex(nums, target, false) - 1;
         return res;
     }

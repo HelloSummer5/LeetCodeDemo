@@ -11,7 +11,11 @@
 所以返回 [0, 1]
 ```
 ### 思路
-放入HashMap
+1. 遍历数组，求出target与数组元素的差
+2. 如果key存在则返回map中的数组下标value，否则，重复步骤3
+3. target与数组元素的差、数组下标分别放入HashMap中的key、value;
+![](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/static/array/leetcode#1_1.gif)
+
 
 ### 代码
 ```java
