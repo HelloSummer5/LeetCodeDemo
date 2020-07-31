@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719da56c-8707-45f2-a59a-e60cdd570c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/leetcode/search/dichotomy/LeetCode209.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/md/search/dichotomy/LeetCode34.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/md/search/dichotomy/LeetCode34.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/search/dichotomy/LeetCode34.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/search/dichotomy/LeetCode34.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode001.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode001.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/leetcode/md/search/dichotomy/LeetCode34.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/md/search/dichotomy/LeetCode34.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +38,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/leetcode/static/array" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/com/leetcode/md/search/dichotomy" />
-      <recent name="$PROJECT_DIR$/src/com/leetcode/linkedlist" />
-      <recent name="$PROJECT_DIR$/src/com/leetcode/md/everyday" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/leetcode/static/array" />
       <recent name="$PROJECT_DIR$/src/com/leetcode/md/array" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -58,7 +52,10 @@
       <recent name="com.leetcode.array" />
       <recent name="com.leetcode.everyday" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/leetcode/md/search/dichotomy" />
+      <recent name="$PROJECT_DIR$/src/com/leetcode/linkedlist" />
+      <recent name="$PROJECT_DIR$/src/com/leetcode/md/everyday" />
       <recent name="$PROJECT_DIR$/src/com/leetcode/md/array" />
     </key>
   </component>
@@ -204,7 +201,7 @@
       <workItem from="1595899725342" duration="6594000" />
       <workItem from="1595986254374" duration="716000" />
       <workItem from="1596176475327" duration="1377000" />
-      <workItem from="1596186851622" duration="810000" />
+      <workItem from="1596186851622" duration="2018000" />
     </task>
     <servers />
   </component>
