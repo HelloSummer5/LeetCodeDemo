@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719da56c-8707-45f2-a59a-e60cdd570c88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/array/LeetCode240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/array/LeetCode240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/util/PrintUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeDemo/com/leetcode/util/PrintUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/leetcode/array/LeetCode240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/array/LeetCode240.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode240.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/md/array/LeetCode240.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/leetcode/util/PrintUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leetcode/util/PrintUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +213,7 @@
       <workItem from="1597241545962" duration="510000" />
       <workItem from="1597282588636" duration="567000" />
       <workItem from="1597567813992" duration="228000" />
-      <workItem from="1601358675300" duration="6326000" />
+      <workItem from="1601358675300" duration="6462000" />
     </task>
     <servers />
   </component>
@@ -342,6 +337,10 @@
     <state x="479" y="434" key="com.intellij.ide.util.TipDialog/0.23.1680.976@0.23.1680.976" timestamp="1596433212655" />
     <state x="820" y="132" key="com.intellij.ide.util.TipDialog/0.23.1680.978@0.23.1680.978" timestamp="1594556083824" />
     <state x="479" y="435" key="com.intellij.ide.util.TipDialog/0.23.1680.979@0.23.1680.979" timestamp="1597567832791" />
+    <state x="544" y="316" width="652" height="464" key="find.popup" timestamp="1601367789885">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state x="544" y="316" width="652" height="464" key="find.popup/0.23.1680.980@0.23.1680.980" timestamp="1601367789885" />
     <state x="-1514" y="76" key="new project wizard" timestamp="1596436084159">
       <screen x="-1920" y="-100" width="1920" height="1057" />
     </state>
