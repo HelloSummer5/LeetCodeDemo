@@ -20,4 +20,8 @@ public class PrintUtil {
         System.out.println(res);
     }
 
+    public static void println(String s){
+        System.out.println(s);
+    }
+
 }

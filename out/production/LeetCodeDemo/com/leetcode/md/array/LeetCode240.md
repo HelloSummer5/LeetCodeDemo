@@ -26,11 +26,26 @@
 - 从矩阵的左下角看，上方的数字都比其小，右方的数字都比其大，所以依据该规律去判断数字是否存在
 - 设当前数字为 cur，目标数字为 target，当 target < cur 时，cur 更新为其上面的数字，当 target > cur 时，cur 更新为其右侧的数字，直到相等则返回 true，否则到了矩阵边界返回 false
 - 时间复杂度：O(m+n)
+ ![](https://github.com/HelloSummer5/LeetCodeDemo/blob/master/src/com/leetcode/static/array/LeetCod240_1.png)
 
 ### 代码
 ```java
 class Solution {
+  public boolean searchMatrix(int[][] matrix, int target) {
+          // 判空
+          if (matrix.length == 0) return false;
   
+          // 从矩阵左下角元素为基准
+          int i = matrix.length - 1;
+          int j = 0;
+  
+          while (j < matrix[0].length && i >= 0) {
+              if (target < matrix[i][j]) i--;
+              else if (target > matrix[i][j]) j++;
+              else return true;
+          }
+          return false;
+      }
 }
 ```
 

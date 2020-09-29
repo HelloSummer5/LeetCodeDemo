@@ -28,14 +28,13 @@ import java.util.Map;
  */
 public class LeetCode240 {
     public static void main(String[] args) {
-//        int[][] matrix = {
-//                {1, 4,  7, 11, 15},
-//                {2, 5, 8, 12, 19},
-//                {3, 6, 9, 16, 22},
-//                {10, 13, 14, 17, 24},
-//                {18, 21, 23, 26, 30}
-//        };
-        int[][] matrix = {};
+        int[][] matrix = {
+                {1, 4,  7, 11, 15},
+                {2, 5, 8, 12, 19},
+                {3, 6, 9, 16, 22},
+                {10, 13, 14, 17, 24},
+                {18, 21, 23, 26, 30}
+        };
         int target1 = 5;
         int target2 = 20;
 //        PrintUtil.print(findNumberIn2DArray(matrix, target1));
