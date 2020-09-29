@@ -16,8 +16,8 @@ public class PrintUtil {
         }
     }
 
-    public static void print(Boolean res){
-        System.out.print(res);
+    public static void println(Boolean res){
+        System.out.println(res);
     }
 
 }

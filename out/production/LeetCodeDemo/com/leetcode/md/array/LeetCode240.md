@@ -30,21 +30,7 @@
 ### 代码
 ```java
 class Solution {
-  public boolean searchMatrix(int[][] matrix, int target) {
-          // 判空
-          if (matrix.length == 0) return false;
   
-          // 从矩阵左下角元素为基准
-          int i = matrix.length - 1;
-          int j = 0;
-  
-          while (j < matrix[0].length && i >= 0) {
-              if (target < matrix[i][j]) i--;
-              else if (target > matrix[i][j]) j++;
-              else return true;
-          }
-          return false;
-      }
 }
 ```
 
