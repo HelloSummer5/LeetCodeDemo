@@ -1,5 +1,7 @@
 package com.leetcode.array;
 
+import com.leetcode.util.PrintUtil;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +18,9 @@ import java.util.Map;
  */
 public class LeetCode001 {
     public static void main(String[] args) {
-        int[] arr = new int[]{2, 7, 11, 15};
+        int[] nums = new int[]{2, 7, 11, 15};
+        int[] res = twoSum(nums, 9);
+        PrintUtil.print(res);
     }
 
     /**
@@ -25,7 +29,7 @@ public class LeetCode001 {
      * @param target
      * @return
      */
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int key = target - nums[i];

@@ -16,4 +16,8 @@ public class PrintUtil {
         }
     }
 
+    public static void print(Boolean res){
+        System.out.print(res);
+    }
+
 }
